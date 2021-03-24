@@ -1,0 +1,49 @@
+{% extends 'core/base.html' %}
+
+{% block title %} Login | {% endblock %}
+
+{% block content %}
+
+<h1 class=title">Log in</h1>
+<form method="post" action=".">
+    {% csrf_token %}
+
+    {{ form.as_p }}
+       <div class="field">
+        <div class="control">
+            <button class="button is-dark isupper-case">Log in</button>
+        </div>
+    </div>
+    <!-- bulma FIELD
+    <div class="field">
+  <p class="control has-icons-left has-icons-right">
+    <input class="input" type="email" placeholder="Email">
+    <span class="icon is-small is-left">
+      <i class="fas fa-envelope"></i>
+    </span>
+    <span class="icon is-small is-right">
+      <i class="fas fa-check"></i>
+    </span>
+  </p>
+</div>
+<div class="field">
+  <p class="control has-icons-left">
+    <input class="input" type="password" placeholder="Password">
+    <span class="icon is-small is-left">
+      <i class="fas fa-lock"></i>
+    </span>
+  </p>
+</div>
+<div class="field">
+  <p class="control">
+    <button class="button is-success">
+      Login
+    </button>
+  </p>
+</div>
+
+    -->
+
+</form>
+
+{% endblock %}

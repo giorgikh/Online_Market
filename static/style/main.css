@@ -42,3 +42,17 @@
 .product-list-item .box .price {
     color: #888;
 }
+
+/*
+.product-list-item .box .subtitle{
+margin-bottom: 0px;
+}
+.product-list-item .box .title{
+color:#888888;
+}
+*/
+
+.product_title {
+cursor: pointer;
+color: #000204;
+}

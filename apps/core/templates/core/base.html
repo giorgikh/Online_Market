@@ -13,6 +13,7 @@
 
 
 <nav class="navbar is-dark">
+
     <div class="navbar-brand">
         <a href="/" class="navbar-item"><strong>Tech Market</strong></a>
 
@@ -24,9 +25,34 @@
     </div>
 
     <div class="navbar-menu" id="main-navbar">
+        <div class="navbar-start">
+            <div class="navbar-item">
+            <form method="GET"  action="{% url 'search' %}" >
+                         <div class="field has-addons">
+                             <div class="control">
+                                 <input type="text" placeholder="Search" name="query" class="input">
+                             </div>
+                             <div class="control">
+                                 <button class="button is-dark is-uppercase">Search</button>
+                             </div>
+                         </div>
+                     </form>
+                </div>
+        </div>
         <div class="navbar-end">
             <a href="{% url 'front_page' %}" class="navbar-item">Home</a>
             <a href="{% url 'contact_page' %}" class="navbar-item">Contact</a>
+                 <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link mr-6">
+          Category
+        </a>
+        <div class="navbar-dropdown">
+             {% for category in menu_categories %}
+            <a href="{% url 'category' category.slug %}" class="navbar-item is-flex">{{ category.title }}</a>
+            {% endfor %}
+        </div>
+      </div>
+    </div>
         </div>
     </div>
 
@@ -40,9 +66,14 @@
 </section>
 
 <footer class="footer">
-    <h3 class="is-size-4 mb-2 pd-0">Tech Market</h3>
-    <a>Become User</a>
+    <h3 class="is-size-4 mb-2 pd-0">Shop</h3>
+    {% if request.user.is_authenticated %}
+    <a href="{% url 'vendor_admin' %}">Vendor admin</a>
+    {% else %}
+    <a href=" {% url 'become_vendor' %}">Become Vendor</a>
+    {% endif %}
 </footer>
+
 
 </body>
 </html>
