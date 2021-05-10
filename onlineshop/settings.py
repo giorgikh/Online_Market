@@ -32,6 +32,10 @@ LOGIN_URL = 'login'
 LOGIN_REDIRECT_URL = 'vendor_admin'
 LOGOUT_REDIRECT_URL = 'front_page'
 
+# 1 დღე წამებში, დრო რამდენხანსაც კალათაში დამატებული ნივთი შეინახება, დროის გასვლის შემდეგ მოხდება კალათიდან ნივთის წაშლა
+SESSION_COOKIE_AGE = 86400
+#სესიის დასახელება
+CART_SESSION_ID = 'cart'
 # Application definition
 
 INSTALLED_APPS = [
@@ -43,7 +47,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'apps.core',
     'apps.vendor',
-    'apps.product'
+    'apps.product',
+    'apps.cart'
 ]
 
 MIDDLEWARE = [
@@ -70,6 +75,7 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 'apps.product.context_processors.menu_categories',
+                'apps.cart.context_processors.cart',
             ],
         },
     },

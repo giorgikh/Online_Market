@@ -42,11 +42,12 @@
         <div class="navbar-end">
             <a href="{% url 'front_page' %}" class="navbar-item">Home</a>
             <a href="{% url 'contact_page' %}" class="navbar-item">Contact</a>
-                 <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link mr-6">
-          Category
-        </a>
-        <div class="navbar-dropdown">
+            <div class="navbar-item">
+                <a href="{% url 'cart' %}" class="button is-dark">Cart{% if cart %} ({{ cart|length }}){% endif %} </a>
+            </div>
+            <div class="navbar-item has-dropdown is-hoverable">
+                <a class="navbar-link mr-6">Category</a>
+                <div class="navbar-dropdown test2">
              {% for category in menu_categories %}
             <a href="{% url 'category' category.slug %}" class="navbar-item is-flex">{{ category.title }}</a>
             {% endfor %}
