@@ -1,17 +1,35 @@
 {% extends 'core/base.html' %}
+{% load i18n %}
 
-{% block title %} Login | {% endblock %}
+{% block title %} {% trans "Login" %} | {% endblock %}
 
 {% block content %}
 
-<h1 class=title">Log in</h1>
+<h1 class="title is-3"> {% trans "Log in" %}</h1>
 <form method="post" action=".">
     {% csrf_token %}
 
-    {{ form.as_p }}
+        {% for field in form %}
+    <div class="fieldWrapper ">
+        <hr>
+        {{ field.errors }}
+        <div class="columns">
+            <div class="column is-2">
+                <label>{{ field.label}} : </label>
+            </div>
+            <div class="column">
+                {{ field }}
+            </div>
+        </div>
+<!--        {% if field.help_text %}-->
+<!--         <p class="help">{{ field.help_text }}</p>-->
+<!--        {% endif %}-->
+    </div>
+{% endfor %}
+    <hr>
        <div class="field">
         <div class="control">
-            <button class="button is-dark isupper-case">Log in</button>
+            <button class="button is-dark isupper-case">{% trans "Log in" %}</button>
         </div>
     </div>
     <!-- bulma FIELD

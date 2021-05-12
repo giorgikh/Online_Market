@@ -1,8 +1,9 @@
 import random
 
-from django.contrib import  messages
+from django.contrib import messages
 from django.db.models import Q
 from django.shortcuts import render, get_object_or_404, redirect
+from django.utils.translation import ugettext as _
 
 from .forms import AddToCartForm
 from .models import Category, Product
@@ -27,11 +28,10 @@ def product(request, category_slug, product_slug):
         if form.is_valid():
             quantity = form.cleaned_data['quantity']
             cart.add(product_id=product.id, quantity=quantity, update_quantity=False)
-            messages.success(request, "Product was added to the cart")
+            messages.success(request, _("Product was added to the cart"))
             return redirect('product', category_slug=category_slug, product_slug=product_slug)
     else:
         form = AddToCartForm()
-
 
     similar_products = list(product.category.products.exclude(id=product.id))
 
@@ -43,6 +43,5 @@ def product(request, category_slug, product_slug):
 
 def category(request, category_slug):
     category = get_object_or_404(Category, slug=category_slug)
-
-
+    print(category)
     return render(request, 'product/category.html', {'category': category})

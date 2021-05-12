@@ -1,0 +1,292 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-05-13 03:47+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+
+#: .\apps\cart\templates\cart\cart.html:8
+#: .\apps\core\templates\core\base.html:48
+msgid "Cart"
+msgstr "კალათა"
+
+#: .\apps\cart\templates\cart\cart.html:16
+msgid "Product"
+msgstr "პროდუქტი"
+
+#: .\apps\cart\templates\cart\cart.html:17
+#: .\apps\vendor\templates\vendor\vendor_admin.html:63
+msgid "Quantity"
+msgstr "რაოდენობა"
+
+#: .\apps\cart\templates\cart\cart.html:18
+#: .\apps\vendor\templates\vendor\vendor_admin.html:22
+#: .\apps\vendor\templates\vendor\vendor_admin.html:62
+msgid "Price"
+msgstr "ფასი"
+
+#: .\apps\cart\templates\cart\cart.html:39
+msgid "Remove"
+msgstr "წაშლა"
+
+#: .\apps\cart\templates\cart\cart.html:46
+msgid "Total cost"
+msgstr "ჯამში"
+
+#: .\apps\cart\templates\cart\cart.html:55
+msgid "Contact information"
+msgstr "საკონტაკო ინფორმაცია"
+
+#: .\apps\cart\templates\cart\cart.html:81
+msgid "First name"
+msgstr "სახელი"
+
+#: .\apps\cart\templates\cart\cart.html:89
+msgid "Last name"
+msgstr "გვარი"
+
+#: .\apps\cart\templates\cart\cart.html:97
+#: .\apps\core\templates\core\contact.html:134
+#: .\apps\vendor\templates\vendor\vendor_admin.html:55
+msgid "E-mail"
+msgstr "ელ.ფოსტა"
+
+#: .\apps\cart\templates\cart\cart.html:105
+#: .\apps\vendor\templates\vendor\vendor_admin.html:56
+msgid "Phone"
+msgstr "ტელეფონი"
+
+#: .\apps\cart\templates\cart\cart.html:115
+#: .\apps\vendor\templates\vendor\vendor_admin.html:53
+msgid "Address"
+msgstr "მისამართი"
+
+#: .\apps\cart\templates\cart\cart.html:123
+msgid "Zip code"
+msgstr "zip კოდი"
+
+#: .\apps\cart\templates\cart\cart.html:131
+msgid "Place"
+msgstr "ბინა"
+
+#: .\apps\cart\templates\cart\cart.html:140
+msgid "Payment information"
+msgstr "გადახდის ინფორმაცია"
+
+#: .\apps\cart\templates\cart\cart.html:154
+msgid "Checkout"
+msgstr "გადახდა"
+
+#: .\apps\cart\templates\cart\cart.html:160
+msgid "You don't have any products in your cart!"
+msgstr "თქვენ არ გაქვთ პროდუქტი კალათაში დამატებული !"
+
+#: .\apps\cart\templates\cart\success.html:4
+msgid "Succses"
+msgstr "გადახდა წარმატებით დასრულდა"
+
+#: .\apps\cart\templates\cart\success.html:8
+msgid "Thanks for the order"
+msgstr "გმადლობთ შეკვეთისთვის!"
+
+#: .\apps\core\templates\core\base.html:20
+msgid "Tech Market"
+msgstr "ტექნიკის მაღაზია"
+
+#: .\apps\core\templates\core\base.html:35
+#: .\apps\core\templates\core\base.html:38
+#: .\apps\product\templates\product\search.html:9
+msgid "Search"
+msgstr "ძებნა"
+
+#: .\apps\core\templates\core\base.html:45
+msgid "Home"
+msgstr "მთავარი"
+
+#: .\apps\core\templates\core\base.html:46
+msgid "Contact"
+msgstr "კონტაქტი"
+
+#: .\apps\core\templates\core\base.html:51
+msgid "Category"
+msgstr "კატეგორია"
+
+#: .\apps\core\templates\core\base.html:72
+msgid "Shop"
+msgstr "მაღაზია"
+
+#: .\apps\core\templates\core\base.html:74
+msgid "Vendor admin"
+msgstr "გამყიდველის პანელი"
+
+#: .\apps\core\templates\core\base.html:76
+msgid "Become Vendor"
+msgstr "გახდი გამყიდველი"
+
+#: .\apps\core\templates\core\contact.html:83
+msgid "Contact Us"
+msgstr "დაგვიკავშირდი"
+
+#: .\apps\core\templates\core\contact.html:84
+msgid "Lorem ipsum dolor"
+msgstr "აღწერაა"
+
+#: .\apps\core\templates\core\contact.html:125
+#: .\apps\vendor\templates\vendor\vendor_admin.html:8
+#: .\apps\vendor\templates\vendor\vendor_admin.html:52
+msgid "Name"
+msgstr "სახელი"
+
+#: .\apps\core\templates\core\contact.html:142
+msgid "Message"
+msgstr "შეტყობინება"
+
+#: .\apps\core\templates\core\contact.html:144
+#: .\apps\vendor\templates\vendor\add_product.html:31
+msgid "Submit"
+msgstr "გაგზავა"
+
+#: .\apps\core\templates\core\frontpage.html:8
+msgid "Newest products"
+msgstr "ახალი პროდუქცია"
+
+#: .\apps\product\templates\product\parts\list_item.html:10
+#: .\apps\product\templates\product\product.html:13
+msgid "GEL"
+msgstr "ლარი"
+
+#: .\apps\product\templates\product\parts\list_item.html:14
+msgid "View"
+msgstr "ნახვა"
+
+#: .\apps\product\templates\product\product.html:15
+msgid "Saller:"
+msgstr "გამყიდველი:"
+
+#: .\apps\product\templates\product\product.html:20
+msgid "Product description"
+msgstr "პროდუქტის აღწერა"
+
+#: .\apps\product\templates\product\product.html:42
+msgid "Add to cart"
+msgstr "კალათაში დამატება"
+
+#: .\apps\product\templates\product\product.html:53
+msgid "Similar products"
+msgstr "მსგავსი პროდუქცია"
+
+#: .\apps\product\templates\product\search.html:10
+#, fuzzy
+#| msgid "Search"
+msgid "Search term"
+msgstr "ძებნა"
+
+#: .\apps\product\views.py:31
+msgid "Product was added to the cart"
+msgstr "პროდუქტი დაემატა კალათაში"
+
+#: .\apps\vendor\templates\vendor\add_product.html:6
+#: .\apps\vendor\templates\vendor\vendor_admin.html:16
+msgid "Add product"
+msgstr "პროდუქტის დამატება"
+
+#: .\apps\vendor\templates\vendor\become_vendor.html:7
+msgid "Become vendor"
+msgstr "გახდი გამყიდველი"
+
+#: .\apps\vendor\templates\vendor\become_vendor.html:33
+msgid "Sing up"
+msgstr "რეგისტრაცია"
+
+#: .\apps\vendor\templates\vendor\become_vendor.html:40
+msgid "Aleady have an account?"
+msgstr "უკვე დარეგისტრირებული ხართ?"
+
+#: .\apps\vendor\templates\vendor\become_vendor.html:41
+#: .\apps\vendor\templates\vendor\login.html:8
+#: .\apps\vendor\templates\vendor\login.html:32
+msgid "Log in"
+msgstr "ავტორიზაცია"
+
+#: .\apps\vendor\templates\vendor\login.html:4
+msgid "Login"
+msgstr "ავტორიზაცია"
+
+#: .\apps\vendor\templates\vendor\vendor_admin.html:3
+msgid "Vendor Admin"
+msgstr "გამყიდველის პანელი"
+
+#: .\apps\vendor\templates\vendor\vendor_admin.html:7
+msgid "Vendor Admin "
+msgstr "გამყიდველის პანელი"
+
+#: .\apps\vendor\templates\vendor\vendor_admin.html:9
+msgid "My Balance"
+msgstr "ჩემი ბალანსი"
+
+#: .\apps\vendor\templates\vendor\vendor_admin.html:10
+msgid "My paid amount"
+msgstr "გადახდილი თანხა"
+
+#: .\apps\vendor\templates\vendor\vendor_admin.html:12
+#, fuzzy
+#| msgid "Log in"
+msgid "Log out"
+msgstr "გამოსვლა"
+
+#: .\apps\vendor\templates\vendor\vendor_admin.html:15
+msgid "My products"
+msgstr "ჩემი პროდუქცია"
+
+#: .\apps\vendor\templates\vendor\vendor_admin.html:21
+#: .\apps\vendor\templates\vendor\vendor_admin.html:61
+msgid "Title"
+msgstr "სათაური"
+
+#: .\apps\vendor\templates\vendor\vendor_admin.html:35
+msgid "You don't have product yet.."
+msgstr "პროდუქტი ჯერ არ გაქვთ დამატებული.."
+
+#: .\apps\vendor\templates\vendor\vendor_admin.html:41
+msgid "My Orders"
+msgstr "ჩემი შეკვეთები"
+
+#: .\apps\vendor\templates\vendor\vendor_admin.html:54
+msgid "Zip and Place"
+msgstr "Zip  და ადგილი"
+
+#: .\apps\vendor\templates\vendor\vendor_admin.html:64
+msgid "Paid"
+msgstr "გადახდილია"
+
+#: .\apps\vendor\templates\vendor\vendor_admin.html:65
+msgid "Total"
+msgstr "ჯამი"
+
+#: .\apps\vendor\templates\vendor\vendor_admin.html:77
+msgid "Yes"
+msgstr "დიახ"
+
+#: .\apps\vendor\templates\vendor\vendor_admin.html:79
+msgid "No"
+msgstr "არა"
+
+msgid "Headphone"
+msgstr "ყურსასმენი"
+msgid "Laptop"
+msgstr "ლეპტოპი"
+msgid "Keyboard & Mouse"
+msgstr "კლავიატურა და მაუსი"

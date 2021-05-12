@@ -43,10 +43,16 @@ class Cart(object):
 
         self.save()
 
+    # კალათიდან პროდუქტის ამოშლა
     def remove(self, product_id):
         if product_id in self.cart:
             del self.cart[product_id]
             self.save()
+
+    # ფორმისა და სესიის წაშლა
+    def clear(self):
+        del self.session[settings.CART_SESSION_ID]
+        self.session.modified = True
 
     # სესიასი კალათის ინფორმაციის შენახვა
     def save(self):

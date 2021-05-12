@@ -1,5 +1,5 @@
 {% extends 'core/base.html' %}
-
+{% load i18n %}
 {% block title %}{{ product.title }} | {% endblock %}
 
 {% block content %}
@@ -10,11 +10,20 @@
     {% endif %}
 
     <h1 class="title">{{ product.title }}</h1>
-    <h1 class="title">GEL {{ product.price}}</h1>
+    <h1 class="title">{{ product.price}} {% trans "GEL" %}</h1>
 
-    <p class="mb-6"><span class="tag is-dark">Saller: {{ product.vendor.name }}</span></p>
+    <p class="mb-6"><span class="tag is-dark">{% trans "Saller:" %} {{ product.vendor.name }}</span></p>
 
-    <p>{{ product.description }}</p>
+    <div class="card">
+      <div class="card-content">
+        <div class="content">
+            <h1 class="is-3">{% trans "Product description" %}</h1><br>
+            {{ product.description }}
+        </div>
+      </div>
+    </div>
+
+<!--    <p>{{ product.description }}</p>-->
     <hr>
 
     {% if messages %}
@@ -30,7 +39,7 @@
                 <input type="number" class="input" name="quantity" value="1" min="1" >
             </div>
             <div class="control">
-                <button class="button is-dark is-uppercase">Add to cart</button>
+                <button class="button is-dark is-uppercase">{% trans "Add to cart" %}</button>
             </div>
         </div>
     </form>
@@ -41,7 +50,7 @@
 
         <div class="columns is-multiline">
             <div class="column is-12">
-                <h2 class="subtitle">Similar products</h2>
+                <h2 class="subtitle">{% trans "Similar products" %}</h2>
             </div>
 
             {% for product in similar_products %}

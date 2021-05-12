@@ -23,6 +23,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'k&s=5gey_ii-x5pnu^mcif_&6zfcqbi+c$bn&sgptf)4q_1ke)'
 
+STRIPE_PUB_KEY = 'pk_test_51IqLTFFKzrMXl4OgSqMAKDG2L0UFL5wR3XLYq3FJpP9vDMIO9NvMAOOCX5lv212sTcaxlkOkMg6y9Vmro6minRHY00Mun2GZ3X'
+STRIPE_SECRET_KEY = 'sk_test_51IqLTFFKzrMXl4OgnrkjbI7hMQMIt6hmQvmg6d4FWJtd1Yrp9q5fpCWJHX1JfAYaJsV6ylrexPzkm6mMNcBBQ6Tn00U6eMzdXJ'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
@@ -48,13 +50,16 @@ INSTALLED_APPS = [
     'apps.core',
     'apps.vendor',
     'apps.product',
-    'apps.cart'
+    'apps.cart',
+    'apps.order'
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
     'django.middleware.common.CommonMiddleware',
+    # 'django.middleware.locale.LocaleMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
@@ -62,6 +67,7 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'onlineshop.urls'
+
 
 TEMPLATES = [
     {
@@ -91,8 +97,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'onlinemarket',
-        'USER': os.environ['USERNAME'],
-        'PASSWORD': os.environ['USER_PASSWORD'],
+        'USER': "market_user",
+        'PASSWORD': 'Qwert1234@',
         'HOST': 'localhost',
         'PORT': '3306',
     }
@@ -120,8 +126,16 @@ AUTH_PASSWORD_VALIDATORS = [
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.1/topics/i18n/
+LOCALE_PATHS = (
+    os.path.join(BASE_DIR, 'locale'),
+)
+# LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'ka'
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGES = [
+    ('en', 'English'),
+    ('ka', 'Georgia')
+]
 
 TIME_ZONE = 'UTC'
 
