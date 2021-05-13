@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 
 from pathlib import Path
 import os
+from decouple import config
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -22,9 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'k&s=5gey_ii-x5pnu^mcif_&6zfcqbi+c$bn&sgptf)4q_1ke)'
-
 STRIPE_PUB_KEY = 'pk_test_51IqLTFFKzrMXl4OgSqMAKDG2L0UFL5wR3XLYq3FJpP9vDMIO9NvMAOOCX5lv212sTcaxlkOkMg6y9Vmro6minRHY00Mun2GZ3X'
 STRIPE_SECRET_KEY = 'sk_test_51IqLTFFKzrMXl4OgnrkjbI7hMQMIt6hmQvmg6d4FWJtd1Yrp9q5fpCWJHX1JfAYaJsV6ylrexPzkm6mMNcBBQ6Tn00U6eMzdXJ'
+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
@@ -97,8 +98,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'onlinemarket',
-        'USER': "market_user",
-        'PASSWORD': 'Qwert1234@',
+        'USER': config('USERNAME'),
+        'PASSWORD': config('USER_PASSWORD'),
         'HOST': 'localhost',
         'PORT': '3306',
     }
