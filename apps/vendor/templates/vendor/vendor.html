@@ -1,0 +1,19 @@
+{% extends 'core/base.html' %}
+{% load i18n %}
+{% block title %} {% trans "Vendors" %} | {% endblock %}
+
+{% block content %}
+    <h1 class="title is-3">{% trans "Vendors list" %}</h1>
+    <div class="columns is-multiline">
+        {% for vendor in vendors %}
+            <div class="column is-3">
+                <div class="box">
+                    <h2 class="subtitle"> {{ vendor }}</h2>
+                    <hr>
+                    <a href="{% url 'vendor' vendor.id %}" class="button is-dark is-uppercase">{% trans "Check Products" %}</a>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+
+{% endblock %}

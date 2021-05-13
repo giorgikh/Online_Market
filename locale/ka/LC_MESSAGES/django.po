@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-13 03:47+0400\n"
+"POT-Creation-Date: 2021-05-13 20:00+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -28,13 +28,13 @@ msgid "Product"
 msgstr "პროდუქტი"
 
 #: .\apps\cart\templates\cart\cart.html:17
-#: .\apps\vendor\templates\vendor\vendor_admin.html:63
+#: .\apps\vendor\templates\vendor\vendor_admin.html:64
 msgid "Quantity"
 msgstr "რაოდენობა"
 
 #: .\apps\cart\templates\cart\cart.html:18
-#: .\apps\vendor\templates\vendor\vendor_admin.html:22
-#: .\apps\vendor\templates\vendor\vendor_admin.html:62
+#: .\apps\vendor\templates\vendor\vendor_admin.html:23
+#: .\apps\vendor\templates\vendor\vendor_admin.html:63
 msgid "Price"
 msgstr "ფასი"
 
@@ -60,17 +60,17 @@ msgstr "გვარი"
 
 #: .\apps\cart\templates\cart\cart.html:97
 #: .\apps\core\templates\core\contact.html:134
-#: .\apps\vendor\templates\vendor\vendor_admin.html:55
+#: .\apps\vendor\templates\vendor\vendor_admin.html:56
 msgid "E-mail"
 msgstr "ელ.ფოსტა"
 
 #: .\apps\cart\templates\cart\cart.html:105
-#: .\apps\vendor\templates\vendor\vendor_admin.html:56
+#: .\apps\vendor\templates\vendor\vendor_admin.html:57
 msgid "Phone"
 msgstr "ტელეფონი"
 
 #: .\apps\cart\templates\cart\cart.html:115
-#: .\apps\vendor\templates\vendor\vendor_admin.html:53
+#: .\apps\vendor\templates\vendor\vendor_admin.html:54
 msgid "Address"
 msgstr "მისამართი"
 
@@ -87,7 +87,7 @@ msgid "Payment information"
 msgstr "გადახდის ინფორმაცია"
 
 #: .\apps\cart\templates\cart\cart.html:154
-msgid "Checkout"
+msgid " Checkout"
 msgstr "გადახდა"
 
 #: .\apps\cart\templates\cart\cart.html:160
@@ -129,12 +129,18 @@ msgid "Shop"
 msgstr "მაღაზია"
 
 #: .\apps\core\templates\core\base.html:74
-msgid "Vendor admin"
+msgid " Vendor panel"
 msgstr "გამყიდველის პანელი"
 
 #: .\apps\core\templates\core\base.html:76
+#: .\apps\vendor\templates\vendor\become_vendor.html:3
 msgid "Become Vendor"
 msgstr "გახდი გამყიდველი"
+
+#: .\apps\core\templates\core\base.html:78
+#, fuzzy
+msgid "Vendors List"
+msgstr "გამყიდველის პანელი"
 
 #: .\apps\core\templates\core\contact.html:83
 msgid "Contact Us"
@@ -145,8 +151,10 @@ msgid "Lorem ipsum dolor"
 msgstr "აღწერაა"
 
 #: .\apps\core\templates\core\contact.html:125
+#: .\apps\vendor\templates\vendor\edit_vendor.html:13
 #: .\apps\vendor\templates\vendor\vendor_admin.html:8
-#: .\apps\vendor\templates\vendor\vendor_admin.html:52
+#: .\apps\vendor\templates\vendor\vendor_admin.html:53
+#: .\apps\vendor\templates\vendor\vendors_item.html:9
 msgid "Name"
 msgstr "სახელი"
 
@@ -198,8 +206,36 @@ msgstr "ძებნა"
 msgid "Product was added to the cart"
 msgstr "პროდუქტი დაემატა კალათაში"
 
+#: .\apps\vendor\forms.py:9
+#, fuzzy
+#| msgid "Category"
+msgid "category"
+msgstr "კატეგორია"
+
+#: .\apps\vendor\forms.py:9
+msgid "image"
+msgstr "ფოტო"
+
+#: .\apps\vendor\forms.py:9
+#, fuzzy
+#| msgid "Title"
+msgid "title"
+msgstr "სათაური"
+
+#: .\apps\vendor\forms.py:9
+#, fuzzy
+#| msgid "Product description"
+msgid "description"
+msgstr "პროდუქტის აღწერა"
+
+#: .\apps\vendor\forms.py:9
+#, fuzzy
+#| msgid "Price"
+msgid "price"
+msgstr "ფასი"
+
 #: .\apps\vendor\templates\vendor\add_product.html:6
-#: .\apps\vendor\templates\vendor\vendor_admin.html:16
+#: .\apps\vendor\templates\vendor\vendor_admin.html:17
 msgid "Add product"
 msgstr "პროდუქტის დამატება"
 
@@ -212,18 +248,50 @@ msgid "Sing up"
 msgstr "რეგისტრაცია"
 
 #: .\apps\vendor\templates\vendor\become_vendor.html:40
+#: .\apps\vendor\templates\vendor\edit_vendor.html:35
 msgid "Aleady have an account?"
 msgstr "უკვე დარეგისტრირებული ხართ?"
 
 #: .\apps\vendor\templates\vendor\become_vendor.html:41
+#: .\apps\vendor\templates\vendor\edit_vendor.html:36
 #: .\apps\vendor\templates\vendor\login.html:8
 #: .\apps\vendor\templates\vendor\login.html:32
 msgid "Log in"
 msgstr "ავტორიზაცია"
 
+#: .\apps\vendor\templates\vendor\edit_vendor.html:3
+msgid "Edit Vendor"
+msgstr "რედაქტირება"
+
+#: .\apps\vendor\templates\vendor\edit_vendor.html:7
+msgid "Edit vendor"
+msgstr "რედაქტირება"
+
+#: .\apps\vendor\templates\vendor\edit_vendor.html:21
+msgid "Password"
+msgstr "პაროლი"
+
+#: .\apps\vendor\templates\vendor\edit_vendor.html:29
+msgid "Save"
+msgstr "ცვლილების შენახვა"
+
 #: .\apps\vendor\templates\vendor\login.html:4
 msgid "Login"
 msgstr "ავტორიზაცია"
+
+#: .\apps\vendor\templates\vendor\vendor.html:3
+#, fuzzy
+#| msgid "Edit Vendor"
+msgid "Vendors"
+msgstr "რედაქტირება"
+
+#: .\apps\vendor\templates\vendor\vendor.html:6
+msgid "Vendors list"
+msgstr "გამყიდველის პანელი"
+
+#: .\apps\vendor\templates\vendor\vendor.html:13
+msgid "Checkout"
+msgstr "გადახდა"
 
 #: .\apps\vendor\templates\vendor\vendor_admin.html:3
 msgid "Vendor Admin"
@@ -242,47 +310,64 @@ msgid "My paid amount"
 msgstr "გადახდილი თანხა"
 
 #: .\apps\vendor\templates\vendor\vendor_admin.html:12
+msgid "Edit info"
+msgstr "ინფორმაციის რედაქტირება"
+
+#: .\apps\vendor\templates\vendor\vendor_admin.html:13
 #, fuzzy
 #| msgid "Log in"
 msgid "Log out"
 msgstr "გამოსვლა"
 
-#: .\apps\vendor\templates\vendor\vendor_admin.html:15
+#: .\apps\vendor\templates\vendor\vendor_admin.html:16
 msgid "My products"
 msgstr "ჩემი პროდუქცია"
 
-#: .\apps\vendor\templates\vendor\vendor_admin.html:21
-#: .\apps\vendor\templates\vendor\vendor_admin.html:61
+#: .\apps\vendor\templates\vendor\vendor_admin.html:22
+#: .\apps\vendor\templates\vendor\vendor_admin.html:62
 msgid "Title"
 msgstr "სათაური"
 
-#: .\apps\vendor\templates\vendor\vendor_admin.html:35
+#: .\apps\vendor\templates\vendor\vendor_admin.html:36
 msgid "You don't have product yet.."
 msgstr "პროდუქტი ჯერ არ გაქვთ დამატებული.."
 
-#: .\apps\vendor\templates\vendor\vendor_admin.html:41
+#: .\apps\vendor\templates\vendor\vendor_admin.html:42
 msgid "My Orders"
 msgstr "ჩემი შეკვეთები"
 
-#: .\apps\vendor\templates\vendor\vendor_admin.html:54
+#: .\apps\vendor\templates\vendor\vendor_admin.html:55
 msgid "Zip and Place"
 msgstr "Zip  და ადგილი"
 
-#: .\apps\vendor\templates\vendor\vendor_admin.html:64
+#: .\apps\vendor\templates\vendor\vendor_admin.html:65
 msgid "Paid"
 msgstr "გადახდილია"
 
-#: .\apps\vendor\templates\vendor\vendor_admin.html:65
+#: .\apps\vendor\templates\vendor\vendor_admin.html:66
 msgid "Total"
 msgstr "ჯამი"
 
-#: .\apps\vendor\templates\vendor\vendor_admin.html:77
+#: .\apps\vendor\templates\vendor\vendor_admin.html:78
 msgid "Yes"
 msgstr "დიახ"
 
-#: .\apps\vendor\templates\vendor\vendor_admin.html:79
+#: .\apps\vendor\templates\vendor\vendor_admin.html:80
 msgid "No"
 msgstr "არა"
+
+#: .\apps\vendor\templates\vendor\vendors_item.html:16
+msgid "For this vendor product not found.."
+msgstr "გამყიდველს პროდუქტი დამატებული არ აქვს.."
+
+#, fuzzy
+#~ msgid " Vendor admin"
+#~ msgstr "გამყიდველის პანელი"
+
+#, fuzzy
+#~| msgid "Newest products"
+#~ msgid "View products"
+#~ msgstr "ახალი პროდუქცია"
 
 msgid "Headphone"
 msgstr "ყურსასმენი"
@@ -290,3 +375,7 @@ msgid "Laptop"
 msgstr "ლეპტოპი"
 msgid "Keyboard & Mouse"
 msgstr "კლავიატურა და მაუსი"
+msgid " Vendors list:"
+msgstr "გამყიდველების სია"
+msgid "Check Products"
+msgstr "პროდუქციის ნახვა"

@@ -39,6 +39,8 @@ LOGOUT_REDIRECT_URL = 'front_page'
 SESSION_COOKIE_AGE = 86400
 #სესიის დასახელება
 CART_SESSION_ID = 'cart'
+
+
 # Application definition
 
 INSTALLED_APPS = [

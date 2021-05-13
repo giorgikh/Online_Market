@@ -71,10 +71,11 @@
 <footer class="footer" style="padding: 1rem 3.5rem 1rem;">
     <h3 class="is-size-4 mb-2 pd-0">{% trans "Shop" %}</h3>
     {% if request.user.is_authenticated %}
-    <a href="{% url 'vendor_admin' %}">{% trans "Vendor admin" %}</a>
+    <a href="{% url 'vendor_admin' %}">{% trans " Vendor panel" %}</a>
     {% else %}
     <a href=" {% url 'become_vendor' %}">{% trans "Become Vendor" %}</a>
     {% endif %}
+    <a href="{% url 'vendors' %}" class="ml-5">{% trans " Vendors list:" %}</a>
 
 <div class="dropdown is-up">
 <!--<a class="dropdown-item" href="{% url 'change_language' %}">English</a>-->

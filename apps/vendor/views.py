@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth import login
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import UserCreationForm
@@ -85,3 +85,13 @@ def edit_vendor(request):
             return redirect('vendor_admin')
 
     return render(request, 'vendor/edit_vendor.html', {'vendor': vendor})
+
+
+def vendors(request):
+    vendors = Vendor.objects.all()
+    return render(request, 'vendor/vendor.html', { "vendors": vendors})
+
+
+def vendor_item(request, vendor_id):
+    vendor = get_object_or_404(Vendor, pk=vendor_id)
+    return render(request, 'vendor/vendors_item.html', {'vendor': vendor})

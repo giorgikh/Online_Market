@@ -1,5 +1,8 @@
-from ..cart.cart import Cart
+from django.conf import settings
+# from django.core.mail import EmailMultiAlternatives
+# from django.template.loader import render_to_string
 
+from ..cart.cart import Cart
 from ..order.models import OrderItem, Order
 
 def checkout(request, first_name, last_name, email, address, zip_code, phone, place, amount):
@@ -10,3 +13,8 @@ def checkout(request, first_name, last_name, email, address, zip_code, phone, pl
         order.vendors.add(item['product'].vendor)
 
     return order
+
+# def notify_vendor(order):
+#     from_email = settings.DEFAULT_EMAIL_FROM
+#
+#     for vendor in order.vendors.all():
