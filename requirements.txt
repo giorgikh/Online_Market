@@ -10,4 +10,3 @@ requests==2.25.1
 sqlparse==0.4.1
 stripe==2.56.0
 urllib3==1.26.4
-gettext==0.21
