@@ -149,10 +149,13 @@
               {% endfor %}
           {% endif %}
 
-          <div class="field">
+          <div class="field is-flex">
               <div class="control">
                   <button class="button is-dark mt-4 is-uppercase">{% trans " Checkout" %}</button>
               </div>
+              <div class="control">
+                <button type="button" class="button is-dark is-uppercase mt-4 ml-3"><a class="is-white" href="{% url 'vendor_admin' %} " style="color:inherit">{% trans "Back" %}</a></button>
+            </div>
           </div>
       </form>
 

@@ -28,10 +28,13 @@
     </div>
 {% endfor %}
     <hr>
-    <div class="field">
+    <div class="field is-flex">
         <div class="control">
             <button class="button is-dark isupper-case">{% trans "Sing up" %}</button>
         </div>
+        <div class="control">
+                <button type="button" class="button is-dark is-uppercase ml-3"><a class="is-white" href="{% url 'vendors' %} " style="color:inherit">{% trans "Back" %}</a></button>
+            </div>
     </div>
 
 </form>

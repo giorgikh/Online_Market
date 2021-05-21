@@ -1,0 +1,55 @@
+{% extends 'core/base.html' %}
+{% load i18n %}
+{% block title %} {% trans "Edit product" %} | {% endblock %}
+
+{% block content %}
+    <h1 class="title">{% trans "Edit product" %}</h1>
+
+    <form method="post" action="." enctype="multipart/form-data">
+        {% csrf_token %}
+<!--        {{ form.as_p }}-->
+            {% for field in form %}
+                <div class="fieldWrapper ">
+                    <hr>
+                    {{ field.errors }}
+                    <div class="columns">
+                        <div class="column is-2">
+                            <label>{{ field.label}} : </label>
+                        </div>
+                        <div class="column">
+                            {{ field }}
+                        </div>
+                    </div>
+            <!--        {% if field.help_text %}-->
+            <!--         <p class="help">{{ field.help_text }}</p>-->
+            <!--        {% endif %}-->
+                </div>
+            {% endfor %}
+        <hr>
+
+        <div class="field">
+            <div class="control">
+                <button class="button is-dark is-uppercase">{% trans "Save changes" %}</button>
+            </div>
+        </div>
+    </form>
+<hr>
+<h1 class="subtitle">{% trans "Add image" %}</h1>
+
+    <form method="post" action="." enctype="multipart/form-data">
+        {% csrf_token %}
+<!--        {{ form.as_p }}-->
+        {{ image_form.as_p }}
+        <hr>
+
+        <div class="field is-flex" style="display:flex;">
+            <div class="control">
+                <button class="button is-dark is-uppercase">{% trans "Add new image" %}</button>
+            </div>
+            <div class="control">
+                <button type="button" class="button is-dark is-uppercase ml-3"><a class="is-white" href="{% url 'vendor_admin' %} " style="color:inherit">{% trans "Back" %}</a></button>
+            </div>
+        </div>
+<!--        <button class="button is-dark is-uppercase"><a href="{% url 'vendor_admin' %}">Back</a></button>-->
+    </form>
+{% endblock %}

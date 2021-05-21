@@ -3,10 +3,26 @@
 {% block title %}{{ product.title }} | {% endblock %}
 
 {% block content %}
+<div id="product_app">
+    <div class="control mb-3">
+                <button type="button" class="button is-dark is-uppercase ml-3"><a class="is-white" href="/" style="color:inherit">{% trans "Back" %}</a></button>
+        </div>
     {% if product.image %}
         <figure class="image is-4by3 mb-6">
-            <img src="{{ product.image.url }}">
+            <img  :src="main_images.image">
         </figure>
+    {% endif %}
+
+    {% if product.images.all %}
+    <hr>
+    <div class="columns">
+        <div class="column is-2"  v-for="image in images" :key="image.id">
+            <img :src="image.thumbnail" @click="changeMainImage(image)" style="cursor: pointer;">
+<!--            <img src="/media/uploads/uploads/sennh300061071b_q1_2-0.jpg">-->
+            <p class="image.thumbnail">{{ image.thumbnail }}</p>
+        </div>
+    </div>
+
     {% endif %}
 
     <h1 class="title">{{ product.title }}</h1>
@@ -58,5 +74,36 @@
             {% endfor %}
         </div>
     {% endif %}
+</div>
+{% endblock %}
+
+{% block scripts %}
+{{ images_string|json_script:"json-imagesstring" }}
+<script src="https://unpkg.com/vue@next"></script>
+<script>
+    const ProductApp = {
+        data() {
+            return {
+            main_images: '',
+            images: []
+            }
+        },
+        mounted(){
+        this.images = JSON.parse(JSON.parse(document.getElementById("json-imagesstring").textContent))
+        console.log(this.images)
+             this.main_images = this.images[0]
+<!--        console.log(this.main_images)-->
+
+        },
+        methods: {
+            changeMainImage(image){
+                this.main_images = image;
+            }
+        }
+    }
+    Vue.createApp(ProductApp).mount('#product_app')
+
+
+</script>
 
 {% endblock %}
