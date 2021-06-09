@@ -405,4 +405,8 @@ msgstr "კლავიატურა და მაუსი"
 msgid "Add new image"
 msgstr "სურათის დამატება"
 
+msgid "Tv"
+msgstr "ტელევიზორები"
 
+msgid "Tablets"
+msgstr "ტაბლეტები"

@@ -60,9 +60,8 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
-    'django.middleware.locale.LocaleMiddleware',
-    'django.middleware.common.CommonMiddleware',
     # 'django.middleware.locale.LocaleMiddleware',
+    'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
@@ -100,8 +99,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'onlinemarket',
-        'USER': config('USERNAME'),
-        'PASSWORD': config('USER_PASSWORD'),
+        'USER': 'market_user',
+        'PASSWORD': 'Qwert1234@',
         'HOST': 'localhost',
         'PORT': '3306',
     }
@@ -133,12 +132,13 @@ LOCALE_PATHS = (
     os.path.join(BASE_DIR, 'locale'),
 )
 # LANGUAGE_CODE = 'en-us'
-LANGUAGE_CODE = 'ka'
 
-LANGUAGES = [
-    ('en', 'English'),
-    ('ka', 'Georgia')
-]
+# LANGUAGES = [
+#     ('ka', 'Georgia'),
+#     ('en', 'English')
+#
+# ]
+LANGUAGE_CODE = 'ka'
 
 TIME_ZONE = 'UTC'
 
@@ -159,3 +159,5 @@ STATICFILES_DIRS = [
 ]
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media/'
+
+ALLOWED_HOSTS = ["localhost", "192.168.1.25"]
