@@ -161,3 +161,4 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media/'
 
 # ALLOWED_HOSTS = ["localhost", "0.0.0.0"] for local net
+
